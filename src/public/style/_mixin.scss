@@ -1,0 +1,61 @@
+// 通用背景颜色
+$commonbg:#00ccff;
+//通用字体
+$basefont:12px;
+
+// 定义背景图片，背景尺寸
+@mixin bis($url){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+//定义圆角
+@mixin borderradius($radius){
+    border-radius: $radius;
+}
+
+// 定义宽高
+@mixin wh($w,$h){
+    width: $w;
+    height: $h;
+}
+
+// 上下左右居中
+@mixin center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+//上下居中
+@mixin ct{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+//左右居中
+@mixin cl{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+//定义字体大小行高，字体类型
+@mixin font($size,$line-height,$fontfamily:"Microsoft YaHei"){
+    font: #{$size}/#{$line-height} $fontfamily;
+}
+
+//定义字体字号及颜色
+@mixin sc($size,$color){
+    font-size: $size;
+    color: $color;
+}
+
+//定义弹性布局以及主轴方向
+@mixin fj($type:space-between){
+    display: flex;
+    justify-content: $type;
+}
